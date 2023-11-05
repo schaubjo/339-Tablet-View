@@ -1,0 +1,184 @@
+body {
+    background-color: blanchedalmond;
+    color: darkblue;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+img,
+video {
+    width: 400px;
+}
+
+h1 {
+    font-size: 50px;
+    font-family: Courier, Impact, Arial;
+    text-align: center;
+}
+
+nav {
+    border: 2px solid darkblue;
+    padding: 10px;
+    margin: 20px;
+}
+
+h2,
+h3 {
+    font-size: 30px;
+    font-family: Courier, Impact, Arial;
+    color: darkblue;
+    border-top-right-radius: 30px;
+}
+
+nav a {
+    font-size: 18px;
+}
+
+#skip {
+    display: none;
+}
+
+.current-page {
+    text-decoration: underline;
+}
+
+ul>li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 10px;
+}
+
+.photo-gallery>img,
+.photo-gallery>video {
+    width: 150px;
+    height: 120px;
+    border: 5px solid darkblue;
+    padding: 10px;
+    margin: 20px;
+}
+
+p {
+    line-height: 2;
+}
+
+.slide-left {
+    animation: slide-left 3s forwards;
+}
+
+
+button {
+    background-color: darkblue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+@keyframes slide-left {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .slide-left {
+        animation: none;
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    .gif {
+        display: none;
+    }
+
+    button {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .photo-gallery>img,
+    .photo-gallery>video {
+        width: 300px;
+        height: 240px;
+    }
+
+
+    ul>li {
+        display: inline-block;
+        margin-left: 50px;
+        margin-right: 50px;
+        height: 50px;
+    }
+
+
+    nav a {
+        background-color: yellow;
+        padding: 5px;
+        margin: 20px;
+    }
+
+    #skip {
+        display: block;
+    }
+
+    .page-link-header {
+        border: 2px solid darkblue;
+        padding: 10px;
+    }
+
+
+    @media (prefers-reduced-motion: no-preference) {
+
+        p:hover,
+        p:focus {
+            font-size: 25px;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    .photo-gallery>img,
+    .photo-gallery>video {
+        width: 300px;
+        height: 240px;
+    }
+
+
+    ul>li {
+        display: inline-block;
+        margin-left: 50px;
+        height: 50px;
+    }
+
+    nav a {
+        background-color: yellow;
+        padding: 5px;
+        margin: 20px;
+    }
+
+    #skip {
+        display: block;
+    }
+
+    .page-link-header {
+        border: 2px solid darkblue;
+        padding: 10px;
+    }
+}
